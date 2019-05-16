@@ -5,7 +5,7 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/pyymatcher.svg)](https://pypi.org/project/pyymatcher/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-> Fast implementation of pattern matching in Python(using gestalt approach).
+> Implementation of pattern matching in Python(using gestalt approach).
 > This library implements the underlaying algorithm(longest_common_substring) with C++.
 
 ## Installation
