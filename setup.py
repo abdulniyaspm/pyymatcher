@@ -20,8 +20,8 @@ setup(
     name='pyymatcher',
     packages=['pyymatcher'],  # this must be the same as the name above
     ext_modules=[cpp_module],
-    version="0.0.4",
-    description="Fast implementation of pattern matching in Python(using gestalt approach)",
+    version="0.0.5",
+    description="Implementation of pattern matching in Python(using gestalt approach)",
     long_description=get_description(),
     long_description_content_type="text/markdown",
     author='Abdul Niyas P M',

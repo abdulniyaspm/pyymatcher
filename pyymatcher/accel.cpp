@@ -69,7 +69,16 @@ PyObject *longest_common_substring(PyObject *, PyObject *args)
     PyObject *out; // Our final result.
     std::string right_s1, right_s2;
 
-    std::vector<std::vector<int> > f(rowCount, std::vector<int>(colCount));
+    /* for 32bit systems if the strings are very long the vector allocation
+    will raise MemoryError causing the function to crash. */
+    std::vector<std::vector<int> > f;
+    try {
+        f.assign(rowCount, std::vector<int>(colCount));
+    }
+    catch(std::exception& e) {
+        PyErr_NoMemory();
+        return NULL;
+    }
 
     for (int i = 1; i < rowCount; ++i)
     {
